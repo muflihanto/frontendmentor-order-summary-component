@@ -1,0 +1,224 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --desaturated-blue-text: 224, 23%, 55%;
+  --dark-blue: hsl(223, 47%, 23%);
+  --hover-blue: #766cf1;
+}
+
+/* Main */
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--pale-blue) url(/images/pattern-background-desktop.svg) no-repeat;
+  background-size: contain;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0px 30px 40px -15px hsla(var(--desaturated-blue-text), 30%);
+  border-radius: 20px;
+  width: 450px;
+  height: 698px;
+  max-height: 80vh;
+}
+
+/* Hero */
+
+.hero {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  flex: 40%;
+}
+
+.hero-image {
+  width: 100%;
+}
+
+/* Order Summary */
+
+.order-summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  flex: 70%;
+  padding: 20px 48px;
+}
+
+.order-title {
+  color: var(--dark-blue);
+  font-weight: 900;
+  font-size: calc(22px + ((100vh - 709px) * (6 / 191)));
+  margin-top: -6px;
+}
+
+.order-description {
+  color: var(--desaturated-blue);
+  padding: 12px;
+  font-weight: 500;
+  line-height: calc(25px + ((100vh - 709px) * (1 / 191)));
+  font-size: 16px;
+  margin-top: calc(-20px - ((100vh - 709px) * (8 / 191)));
+}
+
+.order-plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--very-pale-blue);
+  width: 100%;
+  border-radius: 12.5px;
+  padding: calc(17px + ((100vh - 709px) * (8 / 191))) 24px;
+  margin-top: calc(-12px - ((100vh - 709px) * (12 / 191)));
+}
+
+.plan-info {
+  margin-left: -74px;
+  font-size: 16px;
+}
+
+.plan-name {
+  color: var(--dark-blue);
+  font-weight: 900;
+  margin-top: -2px;
+}
+
+.plan-price {
+  color: var(--desaturated-blue);
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+.order-plan > a {
+  color: var(--bright-blue);
+  font-weight: 700;
+  text-underline-offset: 1px;
+  font-size: 14px;
+  margin-top: -2px;
+}
+
+.order-plan > a:hover {
+  color: var(--hover-blue);
+  text-decoration: none;
+}
+
+.btn-proceed {
+  background-color: var(--bright-blue);
+  border: none;
+  width: 100%;
+  height: 50px;
+  box-shadow: 0px 10px 30px 0px hsla(var(--desaturated-blue-text), 45%);
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 10px;
+  margin-top: 0px;
+}
+
+.btn-proceed:hover {
+  cursor: pointer;
+  background-color: var(--hover-blue);
+}
+
+.btn-cancel {
+  border: none;
+  background-color: unset;
+  font-weight: 900;
+  color: var(--desaturated-blue);
+  font-size: 15px;
+  margin-bottom: calc(12px + ((100vh - 709px) * (16 / 191)));
+}
+
+.btn-cancel:hover {
+  cursor: pointer;
+  color: var(--dark-blue);
+}
+
+/* Footer */
+.attribution {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: var(--desaturated-blue);
+  bottom: 10px;
+  font-size: 14px;
+}
+
+.attribution a {
+  color: var(--bright-blue);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  color: var(--hover-blue);
+}
+
+@media (orientation: portrait) and (max-width: 375px) {
+  .main-container {
+    background: var(--pale-blue) url(/images/pattern-background-mobile.svg) no-repeat;
+  }
+  #main {
+    width: calc(100vw - 48px);
+    height: 567px;
+  }
+  .hero {
+    flex: 30%;
+  }
+  .order-summary {
+    padding: 20px 25px;
+  }
+  .order-title {
+    font-size: 22px;
+    margin-top: 2px;
+  }
+  .order-description {
+    line-height: 25px;
+    font-size: 15px;
+    margin-top: -20px;
+  }
+  .order-plan {
+    padding: 17px 14px;
+    margin-top: -12px;
+  }
+  .plan-info {
+    margin-left: -32px;
+    font-size: 14px;
+  }
+  .plan-price {
+    margin-top: 4px;
+  }
+  .order-plan > a {
+    font-size: 13px;
+    margin-top: 2px;
+  }
+  .btn-proceed {
+    margin-top: 0px;
+  }
+  .btn-cancel {
+    margin-bottom: 12px;
+  }
+  .attribution {
+    bottom: 10px;
+    font-size: 11px;
+  }
+}

@@ -1,37 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Order summary card</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="./styles.css"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Order summary card</title>
 
-  Order Summary
+    <!-- Google Fonts -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <main id="main">
+        <figure class="hero">
+          <img
+            src="/images/illustration-hero.svg"
+            class="hero-image"
+            alt="hero image illustration"
+          />
+        </figure>
+        <section class="order-summary">
+          <h1 class="order-title">Order Summary</h1>
+          <p class="order-description">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+          <div class="order-plan">
+            <img
+              src="./images/icon-music.svg"
+              alt=""
+              class="plan-icon"
+            />
+            <div class="plan-info">
+              <p class="plan-name">Annual Plan</p>
+              <p class="plan-price">$59.99/year</p>
+            </div>
+            <a href=""> Change </a>
+          </div>
+          <button class="btn-proceed">Proceed to Payment</button>
+          <button class="btn-cancel">Cancel Order</button>
+        </section>
+      </main>
+    </div>
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
+    <footer class="attribution">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://github.com/muflihanto"
+        target="_blank"
+        >Muflihanto</a
+      >.
+    </footer>
 
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- <script src="./slider.js"></script> -->
+  </body>
 </html>
